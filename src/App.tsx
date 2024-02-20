@@ -1,9 +1,9 @@
 import "./App.css";
-
+import MainConatiner from "./components/container/MainContainer";
 function App() {
   return (
     <>
-      <p>test</p>
+      <MainConatiner></MainConatiner>
     </>
   );
 }
