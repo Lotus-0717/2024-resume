@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600;700;800&family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-family: "Poppins", "Noto Sans TC", sans-serif;
+}
+
+:root {
+  --color-theme-light: #f1f1f4;
+  --color-theme-dark: #303030;
+  --color-theme-primary: #3a31d8;
+  --color-theme-secondary: #17ee42;
+  --color-theme-accent: #526c51;
+}
+
+[data-theme='eva02'] {
+  --color-theme-light: #f1f1f4;
+  --color-theme-dark: #303030;
+  --color-theme-primary: #ed2323;
+  --color-theme-secondary: #ea8533;
+  --color-theme-accent: #fbe6e5;
+}
+
+[data-theme='gundam'] {
+  --color-theme-light: #f1f1f4;
+  --color-theme-dark: #1a2023;
+  --color-theme-primary: #d01f10;
+  --color-theme-secondary: #0041fa;
+  --color-theme-accent: #ffe437;
+}
