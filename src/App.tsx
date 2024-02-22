@@ -1,5 +1,5 @@
+import MainConatiner from "@components/MainContainer";
 import "./App.css";
-import MainConatiner from "@components/container/MainContainer";
 function App() {
   return (
     <div className="w-full bg-dark">
