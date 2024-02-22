@@ -1,7 +1,12 @@
 import React from "react";
 
-function Stack({ children }: { children: React.ReactNode }) {
-  return <div className=" p-5">{children}</div>;
+interface StackProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+function Stack({ children, className }: StackProps) {
+  return <div className={`p-5 ${className || ""}`}>{children}</div>;
 }
 
 export default Stack;

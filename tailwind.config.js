@@ -2,6 +2,7 @@
 export default {
   mode: "jit",
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  safelist: ["w-5", "w-10", "w-16", "h-5", "h-10", "h-16"],
   theme: {
     extend: {
       screens: {
