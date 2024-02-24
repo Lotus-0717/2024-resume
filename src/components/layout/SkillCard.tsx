@@ -11,12 +11,12 @@ function SkillCard() {
         <SkillCategory categoryName="Languages">
           <SkillItem skillName="HTML"></SkillItem>
           <SkillItem skillName="CSS"></SkillItem>
+          <SkillItem skillName="SASS/SCSS"></SkillItem>
           <SkillItem skillName="JavaScript"></SkillItem>
           <SkillItem skillName="TypeScript"></SkillItem>
         </SkillCategory>
         <SkillCategory categoryName="Frameworks">
           <SkillItem skillName="React"></SkillItem>
-          <SkillItem skillName="Vue"></SkillItem>
         </SkillCategory>
         <SkillCategory categoryName="Libraies">
           <SkillItem skillName="jQuery"></SkillItem>
