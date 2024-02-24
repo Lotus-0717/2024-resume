@@ -1,9 +1,16 @@
 interface IconContainerProps {
   children: React.ReactNode;
   size?: string;
+  className?: string;
+  onClick?: () => void;
 }
 
-function IconContainer({ children, size }: IconContainerProps) {
+function IconContainer({
+  children,
+  size,
+  className,
+  onClick,
+}: IconContainerProps) {
   let IconSize;
   switch (size) {
     case "large":
@@ -18,7 +25,8 @@ function IconContainer({ children, size }: IconContainerProps) {
   }
   return (
     <div
-      className={`${IconSize} flex flex-shrink-0 items-center justify-center`}
+      className={`${IconSize} flex flex-shrink-0 items-center justify-center ${className || ""}`}
+      onClick={onClick}
     >
       {children}
     </div>
