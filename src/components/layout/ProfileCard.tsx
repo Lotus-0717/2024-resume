@@ -2,7 +2,7 @@ import ProfilePhoto from "@components/ui/Profile/ProfilePhoto";
 import ProfileName from "@components/ui/Profile/ProfileName";
 import ProfileContact from "@components/ui/Profile/ProfileContact";
 import SectionCard from "@components/container/SectionCard";
-function ProfileInfo() {
+function ProfileCard() {
   return (
     <div>
       <SectionCard>
@@ -14,4 +14,4 @@ function ProfileInfo() {
   );
 }
 
-export default ProfileInfo;
+export default ProfileCard;

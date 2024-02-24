@@ -1,6 +1,6 @@
 import pic from "@assets/pic.png";
 
-function ProfileInfo() {
+function ProfilePhoto() {
   return (
     <>
       <div className="h-52 w-52 overflow-hidden rounded-full">
@@ -10,4 +10,4 @@ function ProfileInfo() {
   );
 }
 
-export default ProfileInfo;
+export default ProfilePhoto;
