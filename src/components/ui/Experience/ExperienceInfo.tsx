@@ -19,7 +19,7 @@ function ExperienceInfo({
   return (
     <div>
       <p className="text-4xl font-bold">{companyName}</p>
-      <p className="text-light-300 text-2xl font-bold italic opacity-50">
+      <p className="text-2xl font-bold italic text-light opacity-50">
         {companyNameSub}
       </p>
       <p className="text-right text-xl">
