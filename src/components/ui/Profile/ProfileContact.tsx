@@ -3,7 +3,10 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import FlexContainer from "@components/container/FlexContainer";
 import IconContainer from "@components/container/IconContainer";
+import { useTranslation } from "react-i18next";
+
 function ProfileContact() {
+  const { t } = useTranslation();
   return (
     <div className="flex-grow">
       <FlexContainer className="min-h-full flex-col items-start gap-1">
@@ -17,7 +20,7 @@ function ProfileContact() {
           <IconContainer>
             <FontAwesomeIcon icon={faLocationDot} />
           </IconContainer>
-          <p className="text-xl">New Taipei City, Taiwan (R.O.C.).</p>
+          <p className="text-xl">{t("location")}</p>
         </FlexContainer>
       </FlexContainer>
     </div>

@@ -4,7 +4,7 @@ import ChangLangBtn from "./ChangLangBtn";
 
 function ControlContainer() {
   return (
-    <FlexContainer className="w-full justify-end p-2">
+    <FlexContainer className="w-full justify-end gap-2 p-2 px-5">
       <ChangThemeBtn></ChangThemeBtn>
       <ChangLangBtn></ChangLangBtn>
     </FlexContainer>

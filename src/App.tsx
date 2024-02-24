@@ -1,5 +1,6 @@
 import MainConatiner from "@components/MainContainer";
 import "./App.css";
+import "./i18n";
 import ControlContainer from "@components/ui/ControlBar/ControlContainer";
 function App() {
   return (
