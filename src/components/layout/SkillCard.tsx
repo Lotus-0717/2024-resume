@@ -21,11 +21,11 @@ function SkillCard() {
         <SkillCategory categoryName="Libraies">
           <SkillItem skillName="jQuery"></SkillItem>
           <SkillItem skillName="Three.js"></SkillItem>
+          <SkillItem skillName="PIXI.js"></SkillItem>
         </SkillCategory>
         <SkillCategory categoryName="Tools">
           <SkillItem skillName="Git"></SkillItem>
           <SkillItem skillName="Webpack"></SkillItem>
-          <SkillItem skillName="Gulp"></SkillItem>
           <SkillItem skillName="Vite"></SkillItem>
         </SkillCategory>
       </SectionCard>
