@@ -1,66 +1,29 @@
 import pic from "@assets/pic.png";
-import { Sprite, Stage, withFilters, Container } from "@pixi/react";
-import { GlitchFilter } from "pixi-filters";
+import { Sprite, Stage } from "@pixi/react";
 import { useState, useEffect, useRef } from "react";
-import * as PIXI from "pixi.js";
-interface FiltersEffectProps {
-  children?: React.ReactNode;
-}
+import FiltersEffect from "./ProfilePhotoFilter";
 function ProfilePhoto() {
   const picRef = useRef<HTMLDivElement>(null);
-
-  function FiltersEffect({ children }: FiltersEffectProps) {
-    const [glitchConfig, setGlitchConfig] = useState({
-      blue: new PIXI.Point(0, 0),
-      green: new PIXI.Point(0, 0),
-      red: new PIXI.Point(5, -10),
-      slices: 5,
-      offset: 5,
-    });
-    const Filters = withFilters(Container, {
-      glitch: GlitchFilter,
-    });
-
-    function randomIntFromInterval(min: number, max: number) {
-      return Math.random() * (max - min + 1) + min;
+  const [size, setSize] = useState({ width: 0, height: 0 });
+  useEffect(() => {
+    if (picRef.current) {
+      const { clientWidth, clientHeight } = picRef.current;
+      setSize({ width: clientWidth, height: clientHeight });
     }
+  }, []);
 
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        setGlitchConfig((prevConfig) => ({
-          ...prevConfig,
-          blue: new PIXI.Point(
-            randomIntFromInterval(-5, 5),
-            randomIntFromInterval(-5, 5),
-          ),
-          green: new PIXI.Point(randomIntFromInterval(-5, 5), 0),
-          red: new PIXI.Point(
-            randomIntFromInterval(-5, 5),
-            randomIntFromInterval(-5, 5),
-          ),
-        }));
-      }, 100);
-
-      return () => clearInterval(intervalId);
-    }, []);
-
-    return <Filters glitch={glitchConfig}>{children}</Filters>;
-  }
+  console.log("test1");
   return (
     <>
       <div className="h-52 w-52 overflow-hidden rounded-full" ref={picRef}>
-        <Stage
-          width={picRef.current?.clientWidth}
-          height={picRef.current?.clientWidth}
-          className="rounded-full"
-        >
+        <Stage width={size.width} height={size.height} className="rounded-full">
           <FiltersEffect>
             <Sprite
               image={pic}
               scale={{ x: 0.35, y: 0.35 }}
               anchor={0.5}
-              x={(picRef.current?.clientWidth ?? 0) / 2}
-              y={(picRef.current?.clientWidth ?? 0) / 2}
+              x={size.width / 2}
+              y={size.height / 2}
             ></Sprite>
           </FiltersEffect>
         </Stage>
